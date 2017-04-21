@@ -1,4 +1,4 @@
-FROM node:5.11.0-slim
+FROM node:7.2.0-slim
 
 WORKDIR /code
 
@@ -10,4 +10,5 @@ RUN mv /code/node_modules /node_modules
 
 COPY . /code
 
-CMD ["npm", "start"]
+EXPOSE 8000
+CMD ["node", "/code/app.js"]
